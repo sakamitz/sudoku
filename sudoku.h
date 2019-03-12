@@ -31,6 +31,8 @@
 #define MAX_REMOVE   70         /*控制生成数独的规模*/
 #define MAX_GENERATE 35
 
+typedef int ResultType
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -72,33 +74,33 @@ void display(int puzzle[ROW_MAX][COL_MAX]);
 /*------------------------------------------------------
  *  \brief  检测某个数字能否填入数独的某个特定位置
  *
- *  \param[in]  puzzle   数独数组
- *  \param[in]  row      行坐标
- *  \param[in]  col      列坐标
- *  \param[in]  num      待检测数字
- *  \retval     int      成功返回SUCCEED，否则返回FAILED
+ *  \param[in]  puzzle      数独数组
+ *  \param[in]  row         行坐标
+ *  \param[in]  col         列坐标
+ *  \param[in]  num         待检测数字
+ *  \retval     ResultType  成功返回SUCCEED，否则返回FAILED
  */
-int tryNumber(int puzzle[ROW_MAX][COL_MAX], int row, int col, int num);
+ResultType tryNumber(int puzzle[ROW_MAX][COL_MAX], int row, int col, int num);
 
 
 /*------------------------------------------------------
  *  \brief  从指定位置开始填写数独，直到完成
  *
- *  \param[in]  puzzle   数独数组
- *  \param[in]  row      开始位置行坐标
- *  \param[in]  col      开始位置列坐标
- *  \retval     int      成功返回SOLVED，否则返回NO_SOLUTION
+ *  \param[in]  puzzle      数独数组
+ *  \param[in]  row         开始位置行坐标
+ *  \param[in]  col         开始位置列坐标
+ *  \retval     ResultType  成功返回SOLVED，否则返回NO_SOLUTION
  */
-int fillSudoku(int puzzle[ROW_MAX][COL_MAX], int row, int col);
+ResultType fillSudoku(int puzzle[ROW_MAX][COL_MAX], int row, int col);
 
 
 /*------------------------------------------------------
  *  \brief  从第一个数开始填写整个数独
  *
- *  \param[in]  puzzle   数独数组
- *  \retval     int      成功返回SOLVED，否则返回NO_SOLUTION
+ *  \param[in]  puzzle      数独数组
+ *  \retval     ResultType  成功返回SOLVED，否则返回NO_SOLUTION
  */
-int solveSudoku(int puzzle[ROW_MAX][COL_MAX]);
+ResultType solveSudoku(int puzzle[ROW_MAX][COL_MAX]);
 
 
 /*------------------------------------------------------
