@@ -13,8 +13,7 @@ int main()
     printf("\nPress Enter to solve.\n");
     getchar();
 
-    int statu = solveSudoku(puzzle);
-    if (statu == SOLVED)
+    if (SOLVED == solveSudoku(puzzle))
     {
     	printf("Solution:\n");
         display(puzzle);
