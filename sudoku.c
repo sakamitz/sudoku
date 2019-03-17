@@ -64,6 +64,7 @@ void display(int puzzle[ROW_MAX][COL_MAX])
 {
     int i, j;
     printf("+---------------+---------------+---------------+\n");
+    printf("|               |               |               |\n");
     for (i = ROW_START; i < ROW_MAX; ++i)
     {
         printf("|   ");
