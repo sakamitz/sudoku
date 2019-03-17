@@ -31,7 +31,7 @@
 #define MAX_REMOVE   70         /*控制生成数独的规模*/
 #define MAX_GENERATE 35
 
-typedef int ResultType
+typedef int ResultType;
 
 #include <stdio.h>
 #include <stdlib.h>
